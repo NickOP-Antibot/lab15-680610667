@@ -98,13 +98,12 @@ export default function EnrollmentPage() {
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>ลงทะเบียนเรียน</DialogTitle>
-            <DialogDescription>
+            <DialogDescription className="p">
               เลือกวิชาที่ต้องการลงทะเบียน แล้วกรอกข้อมูลให้ครบ
             </DialogDescription>
           </DialogHeader>
 
-          <div className="space-y-4 py-4">
-            {/* เลือกวิชา */}
+          <div className="space-y-4 py-4 pt-0">
             <div className="space-y-2">
               <Label>วิชา</Label>
               <Select
