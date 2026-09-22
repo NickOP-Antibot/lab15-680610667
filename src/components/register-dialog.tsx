@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label";
 
 export function RegisterDialog() {
   const [open, setOpen] = useState(false); // true = แสดง Dialog
-  const [courseId, setCourseId] = useState("");
+  const [_courseId, setCourseId] = useState("");
 
   function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault(); // ไม่ให้หน้าเว็บ reload

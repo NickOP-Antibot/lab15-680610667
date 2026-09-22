@@ -1,5 +1,9 @@
 import { BookOpen, Calendar, Home, Settings } from "lucide-react";
 import { Link, useLocation } from "react-router";
+import { currentUser } from "@/lib/mock-data";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
 import {
   Sidebar,
@@ -11,6 +15,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
 
 const items = [
@@ -49,6 +54,21 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <Separator />
+        <div className="flex items-center gap-3 p-2">
+          <Avatar>
+            <AvatarImage src={currentUser.avatar} alt={currentUser.nickname} />
+            <AvatarFallback>{currentUser.nickname[0]}</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+            <span className="text-sm font-medium">{currentUser.nickname}</span>
+            <Badge variant="outline" className="w-fit text-[10px] mt-1">
+              {currentUser.role}
+            </Badge>
+          </div>
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }

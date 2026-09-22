@@ -73,7 +73,10 @@ export const currentStudent = students.find(
 
 // ข้อมูลส่วนแสดงสถานะผู้ใช้ที่ Sidebar (ข้อ 5 ของโจทย์) — แก้เป็นชื่อเล่นและรูปของตัวเอง
 export const currentUser = {
-  nickname: "Cillian",
+  name: "Chitsanupat Amornpiyapong",
+  nickname: "Chitsanupat",
+  studentId: "680610667",
+  program: "CPE",
   role: "STUDENT" as "STUDENT" | "ADMIN",
-  avatar: "/profile.svg", // วางรูปไว้ที่ public/
+  avatar: "/meow.jpg", // วางรูปไว้ที่ public/
 };
